@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>液态玻璃 · 视频墙</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="glass-title">✨ 玻璃影厅</h1>
+        <div id="video-grid" class="video-grid">
+            <!-- 动态渲染视频卡片 -->
+        </div>
+    </div>
+
+    <!-- 视频播放模态框 -->
+    <div id="player-modal" class="modal">
+        <div class="modal-content glass">
+            <span class="close-btn" id="close-modal"><i class="fas fa-times"></i></span>
+            <div id="player-container"></div>
+            <h3 id="modal-title"></h3>
+        </div>
+    </div>
+
+    <!-- 管理浮动按钮 & 模态框 -->
+    <div class="admin-fab" id="admin-fab"><i class="fas fa-cog"></i></div>
+    <div id="admin-modal" class="modal">
+        <div class="modal-content glass admin-panel">
+            <span class="close-btn" id="close-admin"><i class="fas fa-times"></i></span>
+            <h2>添加新视频</h2>
+            <input type="password" id="admin-key" placeholder="管理密码" class="glass-input">
+            <input type="text" id="bv-input" placeholder="BV号 (如 BV1xx...)" class="glass-input">
+            <button id="add-video-btn" class="glass-btn">添加</button>
+            <p id="admin-message"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
